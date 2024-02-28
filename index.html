@@ -17,7 +17,7 @@
                     <img src="./dist/src/images/login_img.jpg" class="rounded-l-md w-[300px] h-[500px] " alt="">
                 </div>
 
-                <form class="bg-green-300  rounded-r-md w-80 h-[500px] p-6">
+                <form class="bg-green-300 rounded-r-md w-80 h-[500px] p-6 ">
                     <div class="">
                         <div class="flex justify-center">
                             <div class="mt-6">
@@ -58,7 +58,7 @@
                                     Password</a></label>
                             </div>
                         </div>
-                        <button type="submit"
+                        <button type="submit" onclick="event.preventDefault(); Login()"
                             class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
                         <p class="text-xs mt-5 text-center">Don't have an account? <a href="#">Sign Up</a> </p>
 
@@ -69,6 +69,21 @@
         </div>
 
     </div>
+    <script>
+        function Login() {
+            var emailText = document.getElementById('email').value;
+            var passwordText = document.getElementById('password').value;
+
+            if (emailText == "test@test.com" && passwordText == "password") {
+                window.location.href = "/dashboard.html"
+            }
+            else {
+                alert('User Not Found');
+            }
+        }
+
+        // Login();
+    </script>
 </body>
 
 </html>
